@@ -1,45 +1,45 @@
 export interface CampaignSubmit {
-  information: {
-    name: string;
+    information: {
+        name: string;
 
-    describe?: string;
-  };
+        describe?: string;
+    };
 
-  subCampaigns: [
-    {
-      name: string;
-
-      status: boolean;
-
-      ads: [
+    subCampaigns: [
         {
-          name: string;
+            name: string;
 
-          quantity: number;
+            status: boolean;
+
+            ads: [
+                {
+                    name: string;
+
+                    quantity: number;
+                }
+            ];
         }
-      ];
-    }
-  ];
+    ];
 }
 
 export type AdsType = {
-  name: string;
-  quantity: number;
-  id: number;
+    name: string;
+    quantity: number;
+    id: string;
 };
 
 export type SubCampaign = {
-  name: string;
-  status: boolean;
-  ads: AdsType[];
+    name: string;
+    status: boolean;
+    ads: AdsType[];
 };
 
 export type CampaignInformation = {
-  name: string;
-  describe?: string;
+    name: string;
+    describe?: string;
 };
 
 export type Campaign = {
-  information: CampaignInformation;
-  subCampaigns: SubCampaign[];
+    information: CampaignInformation;
+    subCampaigns: SubCampaign[];
 };
